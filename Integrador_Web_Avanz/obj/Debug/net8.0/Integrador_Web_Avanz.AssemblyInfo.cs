@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Integrador_Web_Avanz")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba6f41809e257d19600027e8199c6e2a2edabeda")]
 [assembly: System.Reflection.AssemblyProductAttribute("Integrador_Web_Avanz")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Integrador_Web_Avanz")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
