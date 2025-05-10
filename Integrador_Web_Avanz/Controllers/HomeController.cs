@@ -18,7 +18,7 @@ namespace Integrador_Web_Avanz.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Partners()
         {
             return View();
         }

@@ -5,12 +5,28 @@
       "PackagePath": "staticwebassets\\Integrador_Web_Avanz.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\Figma-Logo.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Figma-Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\Snowflake-Emblem.png",
+      "PackagePath": "staticwebassets\\Imagenes\\Snowflake-Emblem.png"
+    },
+    {
       "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\img-index.png",
       "PackagePath": "staticwebassets\\Imagenes\\img-index.png"
     },
     {
       "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\img-index2.png",
       "PackagePath": "staticwebassets\\Imagenes\\img-index2.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\logo-qlik-color.png",
+      "PackagePath": "staticwebassets\\Imagenes\\logo-qlik-color.png"
+    },
+    {
+      "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\Imagenes\\tienda-nube-logo.png",
+      "PackagePath": "staticwebassets\\Imagenes\\tienda-nube-logo.png"
     },
     {
       "Id": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programación web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\css\\site.css",

@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\home\\faq.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\views\\partner\\partners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\partner\\partners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\views\\home\\testimonios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -19,28 +27,32 @@
       "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\views\\shared\\_confirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\shared\\_confirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\controllers\\partnercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\views\\shared\\_confirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\shared\\_confirmacion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|c:\\users\\alexis\\desktop\\uai\\materias 3ro\\programaci\u00F3n web avanzada\\integrador_web_avanz\\integrador_web_avanz\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\models\\partner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\integrador_web_avanz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:integrador_web_avanz\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5CD2249E-E274-474C-BCD6-F8ACFB17D06C}|Integrador_Web_Avanz\\Integrador_Web_Avanz.csproj|solutionrelative:Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,115 +62,38 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Integrador_Web_Avanz\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\wwwroot\\css\\site.css",
               "RelativeToolTip": "Integrador_Web_Avanz\\wwwroot\\css\\site.css",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAAADMAAAATAAAA",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwCwAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2025-05-04T17:55:40.924Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Contacto.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-28T22:24:27.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCMAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T22:21:13.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-15T00:09:29.684Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Testimonios.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Title": "Partners.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Partner\\Partners.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Partner\\Partners.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Partner\\Partners.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Partner\\Partners.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T22:26:53.779Z",
+              "WhenOpened": "2025-05-10T12:56:51.256Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FAQ.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
-              "ViewState": "AQIAACIAAACATQRyTQQhwCsAAAByAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T22:23:38.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCwAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-04T17:44:02.207Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T22:12:55.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "_Confirmacion.cshtml",
               "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Shared\\_Confirmacion.cshtml",
               "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Shared\\_Confirmacion.cshtml",
@@ -171,7 +106,111 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Controllers\\ClienteController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-08T22:12:55.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "PartnerController.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\PartnerController.cs",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Controllers\\PartnerController.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\PartnerController.cs",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Controllers\\PartnerController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T13:01:08.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FAQ.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\FAQ.cshtml",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAwAwAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T22:23:38.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T17:44:02.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowBQAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T22:21:13.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAC0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-15T00:09:29.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Testimonios.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Testimonios.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-08T22:26:53.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Partner.cs",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Models\\Partner.cs",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Models\\Partner.cs",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Models\\Partner.cs",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Models\\Partner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T12:58:42.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Cliente.cs",
               "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Models\\Cliente.cs",
               "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Models\\Cliente.cs",
@@ -179,7 +218,20 @@
               "RelativeToolTip": "Integrador_Web_Avanz\\Models\\Cliente.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T22:19:04.653Z"
+              "WhenOpened": "2025-05-08T22:19:04.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Contacto.cshtml",
+              "DocumentMoniker": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
+              "RelativeDocumentMoniker": "Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
+              "ToolTip": "C:\\Users\\Alexis\\Desktop\\UAI\\Materias 3ro\\Programaci\u00F3n web avanzada\\Integrador_Web_Avanz\\Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
+              "RelativeToolTip": "Integrador_Web_Avanz\\Views\\Home\\Contacto.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-28T22:24:27.795Z"
             }
           ]
         }
