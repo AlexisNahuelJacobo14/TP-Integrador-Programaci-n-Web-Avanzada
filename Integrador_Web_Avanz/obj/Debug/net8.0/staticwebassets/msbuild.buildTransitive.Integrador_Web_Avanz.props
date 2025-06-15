@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Integrador_Web_Avanz.props" />
-</Project>
