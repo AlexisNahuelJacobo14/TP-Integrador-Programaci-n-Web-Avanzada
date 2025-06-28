@@ -1,0 +1,51 @@
+﻿@{  
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-3">¿Qué podemos <span class="span-bienvenida">desarrollar</span> para vos?</h1>
+    
+    <div class = "welcome-banner">
+        
+        <img src="/Imagenes/img-index2.png" class="welcome-img" alt="Imagen de bienvenida" />
+    
+        <div class="welcome-img-overlay-text">
+            <p>
+                Resolvemos las necesidades digitales de tu empresa.
+                <a class="link-welcome btn-info" asp-controller="Consulta" asp-action="Editar">Contactanos</a>
+            </p>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <h3 class="display-6 text-center">Nuestros Servicios</h3>
+        <div class="row  g-4">
+            <div class="col-md-6 card border-0">
+                <h5 class="card-header text-center border-0">Desarrollo Web</h5>
+                <div class="card-body">
+                    <div class=" text-center"><i class="bi-gear-fill"></i></div>
+                    <div class="list-group-item border-0 text-center">Páginas desde cero a medida</div>
+                    <div class="list-group-item border-0 text-center">Mantenimiento de páginas existentes</div>
+                    <div class="list-group-item border-0 text-center">Rediseño de páginas</div>
+                </div>
+
+            </div>
+            <div class="col-md-6 card border-0">
+                <h5 class="card-header text-center border-0">Data</h5>
+                <div class="card-body">
+                    <div class=" text-center"><i class="bi-bag-check-fill text-center"></i> </div>
+                    <div class="list-group-item border-0 text-center">Dashboards a medida</div>
+                    <div class="list-group-item border-0 text-center">Diseño de bases de datos</div>
+                    <div class="list-group-item border-0 text-center">ETL: Extracción, Transformación y Carga</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+        
+
+  
+</div>

@@ -1,0 +1,93 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.welcome-banner {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.welcome-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    transition: 1s;
+}
+.welcome-img:hover {
+    width: 105%;
+    height: 105%;
+    transition: 1s;
+}
+.span-bienvenida {
+    color: #3a9bdc;
+}
+
+.link-welcome {
+    text-decoration: none;
+    background-color: #3a9bdc;
+    color: white;
+    transition: 0.5s;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+    .link-welcome:hover {
+    font-size: 1.4rem;
+    transition: 0.5s;
+    color: darkgray;
+    background-color: white;
+    color: #3a9bdc;
+    }
+
+.welcome-img-overlay-text {
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+    left 50%;
+    /*transform: translate(-50%, -50%);*/
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 1rem 1rem;
+    /*border-radius: 10px;
+    max-width: 90%;*/
+    font-size: 1.3rem;
+}
+
+.index-servicios {
+    background-color: #3a9bdc;
+    border-radius: 1px;
+    text-align: center;
+    padding: 10px;
+    margin: 25px;
+}
+
+.cabecera {
+    color: white;
+    font-weight: bold;
+}

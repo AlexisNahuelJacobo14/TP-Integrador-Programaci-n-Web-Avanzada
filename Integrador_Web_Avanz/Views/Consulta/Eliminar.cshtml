@@ -1,0 +1,28 @@
+﻿@model Integrador_Web_Avanz.Models.Consulta
+@{
+	ViewData["Title"] = "Eliminar";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Se eliminará la siguiente consulta</h1>
+<div class="row">
+	<div class="col-sm-4">
+		<form asp-action="Eliminar" asp-controller="Consulta" method="post">
+			<input type="hidden" asp-for="IdConsulta" />
+			<div class="mb-2">
+				<label class="form-label" asp-for="TipoConsulta">Tipo de consulta</label>
+				<input type="text" class="form-control form-control-sm" asp-for="TipoConsulta" disabled />
+			</div>
+
+			<div class="mb-2">
+				<label class="form-label" asp-for="Descripcion">Descripcion</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Descripcion" disabled />
+			</div>
+
+			<div class="mb-2">
+				<button class="btn btn-danger" type="submit">Eliminar</button>
+				<a class="btn btn-info" asp-action="Consultas" asp-controller="Consulta">Volver</a>
+			</div>			
+		</form>
+	</div>
+</div>

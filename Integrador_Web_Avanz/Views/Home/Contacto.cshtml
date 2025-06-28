@@ -1,0 +1,44 @@
+﻿@model Integrador_Web_Avanz.Models.Cliente
+@{
+    ViewData["Title"] = "Contacto";
+}
+
+<div class ="container mt-4">
+    <h2>Completá el formulario y nos contactamos a la brevedad</h2>
+    <form asp-controller="Cliente" asp-action="Crear" method="post">
+        
+        <div class= "mb-3">
+            <label asp-for="Nombre" class="form-label">Nombre</label>
+            <input asp-for="Nombre" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Apellido" class="form-label">Apellido</label>
+            <input asp-for="Apellido" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Mail" class="form-label">Mail</label>
+            <input asp-for="Mail" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Telefono" class="form-label">Telefono</label>
+            <input asp-for="Telefono" class="form-control" />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Telefono" class="form-label">Telefono</label>
+            <input asp-for="Telefono" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar </button>
+
+    </form>
+    <div class="container mt-4">
+        <partial name="_Confirmacion" />
+    </div>
+ 
+</div>
+
+

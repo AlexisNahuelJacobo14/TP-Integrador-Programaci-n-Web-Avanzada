@@ -1,0 +1,30 @@
+﻿@model List<Integrador_Web_Avanz.Models.Consulta>
+@{
+	ViewData["Title"] = "Consultas";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Consultas </h1>	
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Acción</th>
+			<th>Tipo de consulta</th>
+			<th>Descripción</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var consulta in Model)
+			{
+				<tr>
+					<td>
+					<a class="btn btn-primary" asp-action ="Editar" asp-controller="Consulta" asp-route-IdConsulta=@consulta.IdConsulta>Editar</a>
+					<a class="btn btn-danger" asp-action="Eliminar" asp-controller="Consulta" asp-route-IdConsulta=@consulta.IdConsulta>Eliminar</a>
+					</td>
+					<td>@consulta.TipoConsulta</td>
+					<td>@consulta.Descripcion</td>
+				</tr>	
+		}
+	</tbody>
+</table>
+
