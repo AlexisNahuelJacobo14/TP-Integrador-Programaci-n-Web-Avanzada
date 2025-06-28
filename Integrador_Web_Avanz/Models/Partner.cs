@@ -11,7 +11,9 @@ public partial class Partner
 
     public string? Imagen { get; set; }
 
-    public Partner(string? marca, string? imagen)
+	public Partner() { }
+	
+	public Partner(string? marca, string? imagen)
 	{ 
 		this.Marca = marca;
 		this.Imagen = imagen;

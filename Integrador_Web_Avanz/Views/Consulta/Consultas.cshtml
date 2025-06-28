@@ -8,21 +8,32 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Acción</th>
 			<th>Tipo de consulta</th>
 			<th>Descripción</th>
+			<th>Nombre Cliente</th>
+			<th>Telefono Cliente</th>
 		</tr>
 	</thead>
 	<tbody>
 		@foreach (var consulta in Model)
 			{
 				<tr>
-					<td>
-					<a class="btn btn-primary" asp-action ="Editar" asp-controller="Consulta" asp-route-IdConsulta=@consulta.IdConsulta>Editar</a>
-					<a class="btn btn-danger" asp-action="Eliminar" asp-controller="Consulta" asp-route-IdConsulta=@consulta.IdConsulta>Eliminar</a>
-					</td>
 					<td>@consulta.TipoConsulta</td>
 					<td>@consulta.Descripcion</td>
+				@if (@consulta._Cliente.Nombre != null) { 
+				<td>@consulta._Cliente.Nombre</td>
+				}
+				else{
+					<td>Sin cliente asociado</td>
+				}
+				@if (@consulta._Cliente.Telefono != null)
+				{
+					<td>@consulta._Cliente.Telefono</td>
+				}
+				else
+				{
+					<td>Sin cliente asociado</td>
+				}
 				</tr>	
 		}
 	</tbody>

@@ -1,10 +1,10 @@
-﻿@model Integrador_Web_Avanz.Models.Consulta
+﻿@model Integrador_Web_Avanz.Models.ClienteConsultaVM
 @{
 	ViewData["Title"] = "Crear Consulta";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.IdConsulta == 0)
+@if (Model.Consulta.IdConsulta == 0)
 {
 	<h1>Crear una consulta</h1>
 }
@@ -18,19 +18,34 @@ else
 <div class="row">
 	<div class="col-sm-4">
 		<form asp-action="Editar" asp-controller="Consulta" method="post">
-			<input type="hidden" asp-for="IdConsulta" />
+			<input type="hidden" asp-for="Consulta.IdConsulta" />
 			<div class="mb-2">
-				<label class="form-label" asp-for="TipoConsulta">Tipo de consulta</label>
-				<select class="form-control form-control-sm" asp-for="TipoConsulta" asp-items="ViewBag.TiposConsulta"></select>
+				<label class="form-label" asp-for="Consulta.TipoConsulta">Tipo de consulta</label>
+				<select class="form-control form-control-sm" asp-for="Consulta.TipoConsulta" asp-items="ViewBag.TiposConsulta"></select>
 
 			</div>
 			<div class="mb-2">
-				<label class="form-label" asp-for="Descripcion">Descripcion de la consulta</label>
-				<input type="text" class="form-control form-control-sm" asp-for="Descripcion" />
+				<label class="form-label" asp-for="Consulta.Descripcion">Descripcion de la consulta</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Consulta.Descripcion" />
+			</div>
+
+			<input type="hidden" asp-for="Cliente.IdCliente" />
+			<div class="mb-2">
+				<label class="form-label" asp-for="Cliente.Nombre">Nombre</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Cliente.Nombre" />
+			</div>
+			<div class="mb-2">
+				<label class="form-label" asp-for="Cliente.Apellido">Apellido</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Cliente.Apellido" />
 			</div>
 
 			<div class="mb-2">
-				@if (Model.IdConsulta == 0)
+				<label class="form-label" asp-for="Cliente.Telefono">Teléfono</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Cliente.Telefono" />
+			</div>
+
+			<div class="mb-2">
+				@if (Model.Consulta.IdConsulta == 0)
 				{
 					<button class="btn btn-primary" type="submit">Enviar</button>
 				}

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Integrador_Web_Avanz.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace Integrador_Web_Avanz.Controllers
 {
@@ -15,8 +16,9 @@ namespace Integrador_Web_Avanz.Controllers
 
 		public IActionResult Index()
 		{
-			List<Consulta> lista = _DbContext.Consulta.ToList();
-			return View(lista);
+			//List<Consulta> lista = _DbContext.Consulta.ToList();
+			//List<Consulta> lista = _DbContext.Consulta.Include(c => c.Cliente).ToList();
+			return View();
 		}
 
 		[HttpGet]
@@ -28,32 +30,53 @@ namespace Integrador_Web_Avanz.Controllers
 				"Data",
 				"Desarrollo Apps"
 			});
-			Consulta _consulta = new Consulta();
-			if(idConsulta != 0)
+			ClienteConsultaVM model = new ClienteConsultaVM();
+			//Consulta model = new Consulta();
+			if (idConsulta != 0)
 			{
-				_consulta = _DbContext.Consulta.Find(idConsulta);
+				//model = _DbContext.Consulta.Find(idConsulta);
 			}
-			return View(_consulta);
+			return View(model);
         }
         
 		[HttpPost]
-        public IActionResult Editar(Consulta modelConsulta)
+        public IActionResult Editar(ClienteConsultaVM model)
         {
 			if (!ModelState.IsValid)
 			{
-				return View(modelConsulta);
+				return View(model);
 			}
 			else
 			{
-				if (modelConsulta.IdConsulta == 0)
+				// Declaramos las variables
+				var cliente = model.Cliente;
+				var consulta = model.Consulta;
+
+				if (cliente.IdCliente == 0)
 				{
-					_DbContext.Consulta.Add(modelConsulta);
+					// Agregamos el cliente
+					_DbContext.Clientes.Add(cliente);
+					_DbContext.SaveChanges();
 				}
 				else
 				{
-					_DbContext.Update(modelConsulta);
+					// Updateamos el cliente
+					_DbContext.Clientes.Update(cliente);
 				}
-				_DbContext.SaveChanges();
+				
+				if(model.Consulta.IdConsulta == 0)
+				{
+					// Agregamos la consulta con FK al cliente
+					
+					consulta.IdCliente = cliente.IdCliente;
+
+					_DbContext.Consulta.Add(consulta);
+					_DbContext.SaveChanges();
+				}
+				else
+				{
+					_DbContext.Consulta.Update(consulta);
+				}
 
 				//return RedirectToAction("Index", "Home");
 				return RedirectToAction("Consultas");
@@ -64,12 +87,12 @@ namespace Integrador_Web_Avanz.Controllers
 		[HttpGet]
 		public IActionResult Eliminar(int idConsulta)
 		{
-			Consulta _consulta = new Consulta();
+			Consulta Consulta = new Consulta();
 			if (idConsulta != 0)
 			{
-				_consulta = _DbContext.Consulta.Find(idConsulta);
+				Consulta = _DbContext.Consulta.Find(idConsulta);
 			}
-			return View(_consulta);
+			return View(Consulta);
 		}
 
 		[HttpPost]
@@ -83,7 +106,7 @@ namespace Integrador_Web_Avanz.Controllers
 
         public IActionResult Consultas()
         {
-			List<Consulta> lista = _DbContext.Consulta.ToList();
+			List<Consulta> lista = _DbContext.Consulta.Include(c => c._Cliente).ToList();
             return View(lista);
         }
     }
