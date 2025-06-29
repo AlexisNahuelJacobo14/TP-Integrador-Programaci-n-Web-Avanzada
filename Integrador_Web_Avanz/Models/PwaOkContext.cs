@@ -25,7 +25,7 @@ public partial class PwaOkContext : DbContext
     {
 
     }
-
+#warning 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -64,14 +64,19 @@ public partial class PwaOkContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("DESCRIPCION");
             entity.Property(e => e.IdCliente).HasColumnName("ID_CLIENTE");
+            entity.Property(e => e.IdPartner).HasColumnName("ID_PARTNER");
             entity.Property(e => e.TipoConsulta)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("TIPO_CONSULTA");
 
-            entity.HasOne(d => d._Cliente).WithMany(p => p.Consulta)
+            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Consulta)
                 .HasForeignKey(d => d.IdCliente)
                 .HasConstraintName("FK_Consulta_Cliente");
+
+            entity.HasOne(d => d.IdPartnerNavigation).WithMany(p => p.Consulta)
+                .HasForeignKey(d => d.IdPartner)
+                .HasConstraintName("FK_Consulta_Partner");
         });
 
         modelBuilder.Entity<Partner>(entity =>

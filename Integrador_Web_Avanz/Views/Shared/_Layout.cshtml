@@ -10,6 +10,29 @@
 </head>
 <body>
     <header>
+     @{
+            var slogans = new[] {
+        "Impulsamos tu negocio con tecnología.",
+        "Soluciones digitales, resultados reales.",
+        "Transformamos ideas en software.",
+        "Tu próximo paso digital comienza aquí.",
+        "Conectamos innovación con estrategia.",
+        "Desarrollamos más que código: creamos valor.",
+        "Consultoría IT orientada a resultados.",
+        "Tecnología que potencia tus decisiones.",
+        "Software a medida, crecimiento sin límites.",
+        "Somos el puente entre tu visión y la solución.",
+        "Desarrollo inteligente, impacto real.",
+        "Más allá del código: entendemos tu negocio.",
+        "Diseñamos el futuro, hoy.",
+        "Expertos en desarrollo, aliados en tu crecimiento.",
+        "Eficiencia digital al alcance de tu empresa."
+        };
+
+            var random = new Random();
+            var fraseAleatoria = slogans[random.Next(slogans.Length)];
+        }
+
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Grupo PMr</a>
@@ -20,22 +43,22 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Partner" asp-action="Partners">Partners</a>
+                            <a class="nav-link" asp-area="" asp-controller="Partner" asp-action="Partners">Partners</a>
                         </li>
                          <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Editar">Contacto</a>
+                            <a class="nav-link" asp-area="" asp-controller="Consulta" asp-action="Editar">Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Testimonios">Testimonios</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Testimonios">Testimonios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="FAQ">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Consulta" asp-action="Consultas">Consultas</a>
+                            <a class="nav-link" asp-area="" asp-controller="Consulta" asp-action="Consultas">Consultas</a>
                         </li>
 
       
@@ -43,6 +66,7 @@
                 </div>
             </div>
         </nav>
+        <p id="slogan"class="text-muted text-center mt-3">@fraseAleatoria</p>
     </header>
     <div class="container-fluid">
         <main role="main" class="pb-3">

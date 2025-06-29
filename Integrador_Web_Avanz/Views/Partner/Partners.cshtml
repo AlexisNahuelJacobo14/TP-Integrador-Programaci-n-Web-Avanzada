@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<Integrador_Web_Avanz.Models.Partner>
 
-<div class="container text-center mt-4">
+<div class="container text-center mt-3">
 	<h2>Partners con los que trabajamos</h2>
 	<div class="row">
 		@foreach (var partner in Model)
 		{
-			<div class="col-md-4 mb-4" style="margin-top:10px">
+			<div class="col-md-3 mb-3" style="margin-top:10px">
 				<h3 class="card-title position-relative" style="color: #3a9bdc;">@partner.Marca</h3>
 				<div class="card h-100 text-center shadow">
 					<img src="@partner.Imagen" class="card-img-top img-fluid" alt="@partner.Marca">

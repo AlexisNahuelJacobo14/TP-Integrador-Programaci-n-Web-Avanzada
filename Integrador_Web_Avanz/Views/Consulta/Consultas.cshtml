@@ -2,37 +2,56 @@
 @{
 	ViewData["Title"] = "Consultas";
 	Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
 
 <h1>Consultas </h1>	
 <table class="table table-striped">
 	<thead>
 		<tr>
+			<th>Partner elegido</th>
 			<th>Tipo de consulta</th>
 			<th>Descripción</th>
 			<th>Nombre Cliente</th>
 			<th>Telefono Cliente</th>
+			<th>Correo electrónico</th>
 		</tr>
 	</thead>
 	<tbody>
+		
 		@foreach (var consulta in Model)
 			{
 				<tr>
+				@if (@consulta.IdPartnerNavigation != null)
+				{
+					<td>@consulta.IdPartnerNavigation.Marca</td>
+				}
+				else{
+					<td>Sin partner</td>
+				}
 					<td>@consulta.TipoConsulta</td>
 					<td>@consulta.Descripcion</td>
-				@if (@consulta._Cliente.Nombre != null) { 
-				<td>@consulta._Cliente.Nombre</td>
+				@if (@consulta.IdClienteNavigation.Nombre != null) { 
+				<td>@consulta.IdClienteNavigation.Nombre</td>
 				}
 				else{
 					<td>Sin cliente asociado</td>
 				}
-				@if (@consulta._Cliente.Telefono != null)
+				@if (@consulta.IdClienteNavigation.Telefono != null)
 				{
-					<td>@consulta._Cliente.Telefono</td>
+					<td>@consulta.IdClienteNavigation.Telefono</td>
 				}
 				else
 				{
-					<td>Sin cliente asociado</td>
+					<td>Sin teléfono asociado</td>
+				}
+				@if (@consulta.IdClienteNavigation.Mail != null)
+				{
+					<td>@consulta.IdClienteNavigation.Mail</td>
+				}
+				else
+				{
+					<td>Sin mail asociado</td>
 				}
 				</tr>	
 		}

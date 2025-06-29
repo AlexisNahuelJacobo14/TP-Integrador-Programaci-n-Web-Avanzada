@@ -14,7 +14,8 @@ namespace Integrador_Web_Avanz.Controllers
             {
             new Partner("Qlik Sense", "/Imagenes/logo-qlik-color.png"),
             new Partner("Snow Flake", "/Imagenes/Snowflake-Emblem.png"),
-            new Partner("Tienda Nube", "/Imagenes/tienda-nube-logo.png")
+            new Partner("Tienda Nube", "/Imagenes/tienda-nube-logo.png"),
+            new Partner("Android Studio", "/Imagenes/android-studio-logo.png")
             };
             return View(partners);
 

@@ -2,6 +2,12 @@
 @{
 	ViewData["Title"] = "Crear Consulta";
 	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewBag.TiposConsulta = new SelectList(new List<string>{
+			"Desarrollo Web",
+			"Data",
+			"Desarrollo Apps",
+			"Otros"
+			});
 }
 
 @if (Model.Consulta.IdConsulta == 0)
@@ -21,7 +27,16 @@ else
 			<input type="hidden" asp-for="Consulta.IdConsulta" />
 			<div class="mb-2">
 				<label class="form-label" asp-for="Consulta.TipoConsulta">Tipo de consulta</label>
-				<select class="form-control form-control-sm" asp-for="Consulta.TipoConsulta" asp-items="ViewBag.TiposConsulta"></select>
+				<select id="tipoConsulta" class="form-control form-control-sm" asp-for="Consulta.TipoConsulta" asp-items="ViewBag.TiposConsulta">
+					<option>--Seleccionar--</option>
+				</select>
+
+				<div id="partnerContainer">
+					<label class="form-label" asp-for="Consulta.IdPartner">Partner</label>
+					<select id="partnerSelect"class="form-control form-control-sm" asp-for="Consulta.IdPartner" asp-items="@Model._listaPartners">
+						<option>--Seleccionar--</option>
+					</select>
+				</div>
 
 			</div>
 			<div class="mb-2">
@@ -45,6 +60,11 @@ else
 			</div>
 
 			<div class="mb-2">
+				<label class="form-label" asp-for="Cliente.Mail">Correo electrónico</label>
+				<input type="text" class="form-control form-control-sm" asp-for="Cliente.Mail" />
+			</div>
+
+			<div class="mb-2">
 				@if (Model.Consulta.IdConsulta == 0)
 				{
 					<button class="btn btn-primary" type="submit">Enviar</button>
@@ -59,5 +79,7 @@ else
 		</form>
 	</div>
 </div>
+
+
 
 

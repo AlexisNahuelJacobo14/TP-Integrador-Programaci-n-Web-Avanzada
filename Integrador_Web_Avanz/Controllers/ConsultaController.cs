@@ -14,13 +14,6 @@ namespace Integrador_Web_Avanz.Controllers
 			_DbContext = dbContext;
 		}
 
-		public IActionResult Index()
-		{
-			//List<Consulta> lista = _DbContext.Consulta.ToList();
-			//List<Consulta> lista = _DbContext.Consulta.Include(c => c.Cliente).ToList();
-			return View();
-		}
-
 		[HttpGet]
         public IActionResult Editar(int idConsulta)
         {
@@ -28,14 +21,18 @@ namespace Integrador_Web_Avanz.Controllers
 			{
 				"Desarrollo Web",
 				"Data",
-				"Desarrollo Apps"
+				"Desarrollo Apps",
+				"Otros"
 			});
-			ClienteConsultaVM model = new ClienteConsultaVM();
-			//Consulta model = new Consulta();
-			if (idConsulta != 0)
+			ClienteConsultaVM model = new ClienteConsultaVM()
 			{
-				//model = _DbContext.Consulta.Find(idConsulta);
-			}
+				_listaPartners = _DbContext.Partners.Select(partner => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
+				{
+					Text = partner.Marca,
+					Value = partner.IdPartner.ToString()
+				}).ToList()
+			};
+
 			return View(model);
         }
         
@@ -44,6 +41,11 @@ namespace Integrador_Web_Avanz.Controllers
         {
 			if (!ModelState.IsValid)
 			{
+				model._listaPartners = _DbContext.Partners.Select(partner => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
+				{
+					Text = partner.Marca,
+					Value = partner.IdPartner.ToString()
+				}).ToList();
 				return View(model);
 			}
 			else
@@ -78,7 +80,7 @@ namespace Integrador_Web_Avanz.Controllers
 					_DbContext.Consulta.Update(consulta);
 				}
 
-				//return RedirectToAction("Index", "Home");
+				
 				return RedirectToAction("Consultas");
 			}
             
@@ -106,7 +108,10 @@ namespace Integrador_Web_Avanz.Controllers
 
         public IActionResult Consultas()
         {
-			List<Consulta> lista = _DbContext.Consulta.Include(c => c._Cliente).ToList();
+			List<Consulta> lista = _DbContext.Consulta
+				.Include(c => c.IdClienteNavigation)
+				.Include(c => c.IdPartnerNavigation)
+				.ToList();
             return View(lista);
         }
     }

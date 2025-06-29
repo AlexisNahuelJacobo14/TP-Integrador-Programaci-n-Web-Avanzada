@@ -9,7 +9,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem;
 }
 
 html {
@@ -87,7 +87,30 @@ body {
     margin: 25px;
 }
 
+.cont-servicios {
+    text-align: center;
+    padding: 10px;
+    margin: 25px;
+}
 .cabecera {
     color: white;
     font-weight: bold;
 }
+
+#partnerContainer {
+    display: none;
+}
+.navbar-nav, navbar-brand {
+    background-color: #3a9bdc;
+    border-radius: 5px;
+}
+.nav-link, navbar-brand {
+    color: white !important;
+    transition: 0.5s;
+}
+    .nav-link:hover {
+        background-color: white;
+        color: #3a9bdc !important;
+        font-size: large;
+        transition: 0.5s;
+    }
