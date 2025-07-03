@@ -14,24 +14,32 @@ namespace Integrador_Web_Avanz.Controllers
 			_DbContext = dbContext;
 		}
 
+
 		[HttpGet]
         public IActionResult Editar(int idConsulta)
         {
-			ViewBag.TiposConsulta = new SelectList(new List<string>
+			/*ViewBag.TiposConsulta = new SelectList(new List<string>
 			{
 				"Desarrollo Web",
 				"Data",
 				"Desarrollo Apps",
 				"Otros"
-			});
+			});*/
 			ClienteConsultaVM model = new ClienteConsultaVM()
 			{
 				_listaPartners = _DbContext.Partners.Select(partner => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
 				{
 					Text = partner.Marca,
 					Value = partner.IdPartner.ToString()
+				}).ToList(),
+
+
+				_listaTiposDeConsulta = _DbContext.TipoConsultas.Select(tipoConsulta => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
+				{
+					Text = tipoConsulta.TipoDeConsulta,
+					Value = tipoConsulta.IdTipoConsulta.ToString()
 				}).ToList()
-			};
+            };
 
 			return View(model);
         }
@@ -111,6 +119,7 @@ namespace Integrador_Web_Avanz.Controllers
 			List<Consulta> lista = _DbContext.Consulta
 				.Include(c => c.IdClienteNavigation)
 				.Include(c => c.IdPartnerNavigation)
+				.Include(c => c.IdTipoConsultaNavigation)
 				.ToList();
             return View(lista);
         }

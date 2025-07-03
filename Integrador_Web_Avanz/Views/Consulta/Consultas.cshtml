@@ -29,8 +29,14 @@
 				else{
 					<td>Sin partner</td>
 				}
-					<td>@consulta.TipoConsulta</td>
+
+				@if (@consulta.IdTipoConsultaNavigation.TipoDeConsulta != null)
+				{
+					<td>@consulta.IdTipoConsultaNavigation.TipoDeConsulta</td>
+				}
+					
 					<td>@consulta.Descripcion</td>
+
 				@if (@consulta.IdClienteNavigation.Nombre != null) { 
 				<td>@consulta.IdClienteNavigation.Nombre</td>
 				}

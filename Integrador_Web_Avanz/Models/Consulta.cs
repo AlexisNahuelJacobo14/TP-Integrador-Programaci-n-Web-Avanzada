@@ -8,17 +8,16 @@ public partial class Consulta
 {
     public int IdConsulta { get; set; }
 
-	[Required(ErrorMessage = "El campo {0} es requerido.")]
-	[StringLength(maximumLength: 50, MinimumLength = 1, ErrorMessage = "La longitud del campo debe ser entre 1 y 50")]
-	[Display(Name = "Tipo de la consulta")]
-
-	public string? TipoConsulta { get; set; }
-
     public string? Descripcion { get; set; }
 
-    public int? IdCliente { get; set; }
+    public int? IdCliente { get; set; }  // FK
 
-	public int? IdPartner { get; set; }
+    public int? IdPartner { get; set; }  // FK
+
+	[Required(ErrorMessage = "El campo {0} es requerido.")]
+	[Display(Name = "Tipo de la consulta")]
+	public int? IdTipoConsulta { get; set; }  // FK
+    public virtual TipoConsulta? IdTipoConsultaNavigation { get; set; }
 
     public virtual Cliente? IdClienteNavigation { get; set; }
 

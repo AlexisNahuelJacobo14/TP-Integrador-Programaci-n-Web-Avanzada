@@ -26,8 +26,8 @@ else
 		<form asp-action="Editar" asp-controller="Consulta" method="post">
 			<input type="hidden" asp-for="Consulta.IdConsulta" />
 			<div class="mb-2">
-				<label class="form-label" asp-for="Consulta.TipoConsulta">Tipo de consulta</label>
-				<select id="tipoConsulta" class="form-control form-control-sm" asp-for="Consulta.TipoConsulta" asp-items="ViewBag.TiposConsulta">
+				<label class="form-label" asp-for="Consulta.IdTipoConsulta">Tipo de consulta</label>
+				<select id="tipoConsulta" class="form-control form-control-sm" asp-for="Consulta.IdTipoConsulta" asp-items="@Model._listaTiposDeConsulta">
 					<option>--Seleccionar--</option>
 				</select>
 

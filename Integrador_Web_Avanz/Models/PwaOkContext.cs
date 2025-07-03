@@ -21,6 +21,8 @@ public partial class PwaOkContext : DbContext
 
     public virtual DbSet<Partner> Partners { get; set; }
 
+    public virtual DbSet<TipoConsulta> TipoConsultas { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
 
@@ -54,6 +56,22 @@ public partial class PwaOkContext : DbContext
                 .HasColumnName("TELEFONO");
         });
 
+        modelBuilder.Entity<TipoConsulta>(entity =>
+        {
+            entity.ToTable("Tipo_Consulta");
+
+            entity.HasKey(e => e.IdTipoConsulta);
+
+            entity.Property(e => e.IdTipoConsulta).HasColumnName("ID_TIPO_CONSULTA");
+			entity.Property(e => e.TipoDeConsulta)
+                .HasMaxLength(50)
+				.HasColumnName("TIPO_CONSULTA");
+			entity.Property(e => e.Precio)
+            .HasColumnName("PRECIO")
+			.HasColumnType("decimal(18,2)");
+			
+        });
+
         modelBuilder.Entity<Consulta>(entity =>
         {
             entity.HasKey(e => e.IdConsulta);
@@ -65,18 +83,20 @@ public partial class PwaOkContext : DbContext
                 .HasColumnName("DESCRIPCION");
             entity.Property(e => e.IdCliente).HasColumnName("ID_CLIENTE");
             entity.Property(e => e.IdPartner).HasColumnName("ID_PARTNER");
-            entity.Property(e => e.TipoConsulta)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("TIPO_CONSULTA");
+			entity.Property(e => e.IdTipoConsulta).HasColumnName("ID_TIPO_CONSULTA");
 
-            entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Consulta)
+
+			entity.HasOne(d => d.IdClienteNavigation).WithMany(p => p.Consulta)
                 .HasForeignKey(d => d.IdCliente)
                 .HasConstraintName("FK_Consulta_Cliente");
 
             entity.HasOne(d => d.IdPartnerNavigation).WithMany(p => p.Consulta)
                 .HasForeignKey(d => d.IdPartner)
                 .HasConstraintName("FK_Consulta_Partner");
+            
+            entity.HasOne(d => d.IdTipoConsultaNavigation).WithMany(p => p.Consulta)
+                .HasForeignKey(d => d.IdTipoConsulta)
+                .HasConstraintName("FK_Consulta_TipoConsulta");
         });
 
         modelBuilder.Entity<Partner>(entity =>
