@@ -4,21 +4,20 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.Consulta.IdConsulta == 0)
-{
-	<h1>Crear una consulta</h1>
-}
-else
-{
 
-	<h1>Editar consulta</h1>
-}
+<h1>Crear una consulta</h1>
 
+
+<div class="row">
+@if (TempData["Mensaje"] != null)
+{
+	<span class="alert alert-success">@TempData["Mensaje"]</span>
+}
+</div>
 
 <div class="row">
 	<div class="col-sm-4">
 		<form asp-action="Contacto" asp-controller="Consulta" method="post">
-			<div asp-validation-summary="All" class="text-danger"></div>
 				<input type="hidden" asp-for="Consulta.IdConsulta" />
 				<div class="mb-2">
 					<label class="form-label" asp-for="Consulta.IdTipoConsulta">Tipo de consulta</label>
@@ -29,6 +28,7 @@ else
 								@tipo.TipoDeConsulta
 							</option>
 						}
+					<span asp-validation-for="Consulta.IdTipoConsulta" class="text-danger"></span>
 					</select>
 					<div class="mt-2">
 						<label>Precio:</label>
@@ -40,33 +40,50 @@ else
 						<select id="partnerSelect"class="form-control form-control-sm" asp-for="Consulta.IdPartner" asp-items="@Model._listaPartners">
 							<option>--Seleccionar--</option>
 						</select>
+					<span asp-validation-for="Consulta.IdPartner" class="text-danger"></span>
 					</div>
 
 				</div>
 				<div class="mb-2">
 					<label class="form-label" asp-for="Consulta.Descripcion">Descripcion de la consulta</label>
-					<input type="text" class="form-control form-control-sm" asp-for="Consulta.Descripcion" />
+					<input type="text" class="form-control form-control-sm"  asp-for="Consulta.Descripcion" />
+				<span asp-validation-for="Consulta.Descripcion" class="text-danger"></span>
 				</div>
 
-				<!--<input type="hidden" asp-for="Cliente.IdCliente" />
+				<input type="hidden" asp-for="Cliente.IdCliente" />
+				<div class = "row">
+				@if (TempData["Mensaje"] != null)
+				{
+					<span class="alert alert-warning">@TempData["MensajeDatos"]</span>
+				}
+			</div>
 				<div class="mb-2">
 					<label class="form-label" asp-for="Cliente.Nombre">Nombre</label>
 					<input type="text" class="form-control form-control-sm" asp-for="Cliente.Nombre" />
-				</div>
+				<span asp-validation-for="Cliente.Nombre" class="text-danger"></span>
+				 </div>
 				<div class="mb-2">
 					<label class="form-label" asp-for="Cliente.Apellido">Apellido</label>
 					<input type="text" class="form-control form-control-sm" asp-for="Cliente.Apellido" />
+				<span asp-validation-for="Cliente.Apellido" class="text-danger"></span>
 				</div>
 
 				<div class="mb-2">
 					<label class="form-label" asp-for="Cliente.Telefono">Teléfono</label>
 					<input type="text" class="form-control form-control-sm" asp-for="Cliente.Telefono" />
+				<span asp-validation-for="Cliente.Telefono" class="text-danger"></span>
 				</div>
 
 				<div class="mb-2">
+					<label class="form-label" asp-for="Cliente.Dni">DNI</label>
+					<input type="number" class="form-control form-control-sm" asp-for="Cliente.Dni" />
+				<span asp-validation-for="Cliente.Dni" class="text-danger"></span>
+				</div>
+				<div class="mb-2">
 					<label class="form-label" asp-for="Cliente.Mail">Correo electrónico</label>
-					<input type="text" class="form-control form-control-sm" asp-for="Cliente.Mail" />
-				</div>-->
+					<input type="email" class="form-control form-control-sm" asp-for="Cliente.Mail" />
+				<span asp-validation-for="Cliente.Mail" class="text-danger"></span>
+				</div>
 
 				<div class="mb-2">
 					@if (Model.Consulta.IdConsulta == 0)

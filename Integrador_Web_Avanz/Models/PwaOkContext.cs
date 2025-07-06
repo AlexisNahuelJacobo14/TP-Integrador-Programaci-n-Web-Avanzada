@@ -54,6 +54,9 @@ public partial class PwaOkContext : DbContext
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("TELEFONO");
+            entity.Property(c => c.Dni)
+                .IsUnicode(false)
+                .HasColumnName("Dni");
         });
 
         modelBuilder.Entity<TipoConsulta>(entity =>

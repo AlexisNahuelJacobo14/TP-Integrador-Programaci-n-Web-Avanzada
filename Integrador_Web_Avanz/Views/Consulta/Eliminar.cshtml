@@ -13,11 +13,32 @@
 				<label class="form-label" asp-for="TipoConsulta">Tipo de consulta</label>
 				<input type="text" class="form-control form-control-sm" asp-for="TipoConsulta" disabled />
 			</div>-->
+			<div class="mb-2">
+				<label class="form-label" asp-for="IdTipoConsultaNavigation.TipoDeConsulta">Tipo de consulta</label>
+				<input type="text" class="form-control form-control-sm" asp-for="IdTipoConsultaNavigation.TipoDeConsulta" disabled />
+			</div>
 
 			<div class="mb-2">
 				<label class="form-label" asp-for="Descripcion">Descripcion</label>
 				<input type="text" class="form-control form-control-sm" asp-for="Descripcion" disabled />
 			</div>
+
+			<div class="mb-2">
+				<label class="form-label" asp-for="IdClienteNavigation.Nombre">Nombre del Cliente</label>
+				<input type="text" class="form-control form-control-sm" asp-for="IdClienteNavigation.Nombre" disabled />
+			</div>
+
+			<div class="mb-2">
+				<label class="form-label" asp-for="IdClienteNavigation.Apellido">Apellido del Cliente</label>
+				<input type="text" class="form-control form-control-sm" asp-for="IdClienteNavigation.Apellido" disabled />
+			</div>
+
+			<div class="mb-2">
+				<label class="form-label" asp-for="IdClienteNavigation.Dni">DNI del Cliente</label>
+				<input type="number" class="form-control form-control-sm" asp-for="IdClienteNavigation.Dni" disabled />
+			</div>
+
+			
 
 			<div class="mb-2">
 				<button class="btn btn-danger" type="submit">Eliminar</button>

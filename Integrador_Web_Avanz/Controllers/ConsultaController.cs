@@ -6,6 +6,7 @@ using Integrador_Web_Avanz.Helpers;
 using Microsoft.AspNetCore.Http;
 using System.Text.Json;
 using System.Collections.Generic;
+using System.Net;
 
 namespace Integrador_Web_Avanz.Controllers
 {
@@ -32,8 +33,8 @@ namespace Integrador_Web_Avanz.Controllers
 		{
 			for(int i = 0; i < cart.Count; i++)
 			{
-				if (cart[i]._Consulta.IdTipoConsulta.Equals(id))
-				{
+                if (cart[i]._Consulta.IdTipoConsulta.Equals(id))
+                {
 					return i;
 				}
 			}
@@ -136,11 +137,11 @@ namespace Integrador_Web_Avanz.Controllers
 			return RedirectToAction("Carrito");
 		}
 		[HttpGet]
-		public IActionResult Quitar(int id)
+		public IActionResult Quitar(int idCarrito)
 		{
 			var cart = Helpers.SessionHelper.GetObjectFromJson<List<Item>>(HttpContext.Session, "cart");
 
-			int index = Exists(cart, id);
+			int index = Exists(cart, idCarrito);
 			cart.RemoveAt(index);
 
 			TempData["Contar"] = ContarItems(cart);
@@ -153,6 +154,7 @@ namespace Integrador_Web_Avanz.Controllers
 		[HttpGet]
         public IActionResult Contacto(int idConsulta)
         {
+
 			ClienteConsultaVM model = new ClienteConsultaVM()
 			{
 				_listaPartners = _DbContext.Partners.Select(partner => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem()
@@ -164,6 +166,17 @@ namespace Integrador_Web_Avanz.Controllers
 				_listaTiposDeConsulta = _DbContext.TipoConsultas.ToList()
 
 		};
+			// Intentar recuperar el DNI del cliente desde la sesión
+			string dniGuardado = HttpContext.Session.GetString("dniCliente");
+
+			if (!string.IsNullOrEmpty(dniGuardado) && int.TryParse(dniGuardado, out int dni))
+			{
+				var cliente = _DbContext.Clientes.FirstOrDefault(c => c.Dni == dni);
+				if (cliente != null)
+				{
+					model.Cliente = cliente;
+				}
+			}
 
 			return View(model);
         }
@@ -178,45 +191,60 @@ namespace Integrador_Web_Avanz.Controllers
 					Text = partner.Marca,
 					Value = partner.IdPartner.ToString()
 				}).ToList();
+
+				model._listaTiposDeConsulta = _DbContext.TipoConsultas.ToList();
+
+
 				return View(model);
 			}
 			else
 			{
 				// Declaramos las variables
-				//var cliente = model.Cliente;
+				
 				var consulta = model.Consulta;
 
-				/*if (cliente.IdCliente == 0)
+				Cliente clienteExistente = _DbContext.Clientes.FirstOrDefault(c => c.Dni == model.Cliente.Dni);
+
+				// Si el cliente no existe, lo agregamos a la BD 
+
+				if (clienteExistente == null)
 				{
 					// Agregamos el cliente
-					_DbContext.Clientes.Add(cliente);
+					_DbContext.Clientes.Add(model.Cliente);
 					_DbContext.SaveChanges();
+					consulta.IdCliente = model.Cliente.IdCliente;
 				}
 				else
 				{
-					// Updateamos el cliente
-					_DbContext.Clientes.Update(cliente);
-				}
-				*/
-				if(model.Consulta.IdConsulta == 0)
-				{
-					// Agregamos la consulta con FK al cliente
-					
-					//consulta.IdCliente = cliente.IdCliente;
+					// Cliente existente, actualizamos sus datos
+					clienteExistente.Nombre = model.Cliente.Nombre;
+					clienteExistente.Apellido = model.Cliente.Apellido;
+					clienteExistente.Mail = model.Cliente.Mail;
 
-					_DbContext.Consulta.Add(consulta);
+					_DbContext.Clientes.Update(clienteExistente);
 					_DbContext.SaveChanges();
+
+					consulta.IdCliente = clienteExistente.IdCliente;
 				}
-				else
-				{
-					_DbContext.Consulta.Update(consulta);
-				}
+
+				// Agregamos la consulta con FK al cliente
+				_DbContext.Consulta.Add(consulta);
+				_DbContext.SaveChanges();
 
 				Cart(consulta.IdConsulta);
+				HttpContext.Session.SetString("dniCliente", model.Cliente.Dni.ToString());
+
+				TipoConsulta tipoConsulta = _DbContext.TipoConsultas.Find(consulta.IdTipoConsulta);
+				TempData["Mensaje"] = $"Consulta de {tipoConsulta.TipoDeConsulta} agregada a tu carrito, podes agregar más o ir a finalizar tu compra. \t ¡Muchas gracias {model.Cliente.Nombre}!";
+				TempData["MensajeDatos"] = $"¡Atención {model.Cliente.Nombre}! Sus datos ya se almacenaron, si los modifica se actualizaran.";
+
+
 				return RedirectToAction("Contacto");
 			}
             
         }
+
+		
 
 		[HttpGet]
 		public IActionResult Eliminar(int idConsulta)
@@ -224,7 +252,11 @@ namespace Integrador_Web_Avanz.Controllers
 			Consulta Consulta = new Consulta();
 			if (idConsulta != 0)
 			{
-				Consulta = _DbContext.Consulta.Find(idConsulta);
+				Consulta = _DbContext.Consulta
+					.Include(c => c.IdTipoConsultaNavigation)
+					.Include(c => c.IdClienteNavigation)
+					.FirstOrDefault(c => c.IdConsulta == idConsulta);
+
 			}
 			return View(Consulta);
 		}
@@ -238,14 +270,58 @@ namespace Integrador_Web_Avanz.Controllers
             return RedirectToAction("Consultas");
         }
 
+		[HttpGet]
         public IActionResult Consultas()
         {
-			List<Consulta> lista = _DbContext.Consulta
+			// Intentar recuperar el DNI del cliente desde la sesión
+			string dniGuardado = HttpContext.Session.GetString("dniCliente");
+			Cliente clienteConsulta = new Cliente();
+
+			if (!string.IsNullOrEmpty(dniGuardado) && int.TryParse(dniGuardado, out int dni))
+			{
+				var cliente = _DbContext.Clientes.FirstOrDefault(c => c.Dni == dni);
+				if (cliente != null)
+				{
+					clienteConsulta = cliente;
+				}
+			}
+
+			ClienteConsultaVM model = new ClienteConsultaVM();
+			model._listaConsultas = _DbContext.Consulta
 				.Include(c => c.IdClienteNavigation)
 				.Include(c => c.IdPartnerNavigation)
 				.Include(c => c.IdTipoConsultaNavigation)
+				.Where(c => c.IdCliente == clienteConsulta.IdCliente)
 				.ToList();
-            return View(lista);
+            return View(model);
         }
-    }
+		[HttpPost]
+		public IActionResult Consultas(Cliente cliente)
+		{
+			Cliente clienteConsulta = _DbContext.Clientes.FirstOrDefault(c => c.Dni == cliente.Dni);
+			ClienteConsultaVM model = new ClienteConsultaVM();
+			if (clienteConsulta != null)
+			{
+				
+				model._listaConsultas = _DbContext.Consulta
+					.Include(c => c.IdClienteNavigation)
+					.Include(c => c.IdPartnerNavigation)
+					.Include(c => c.IdTipoConsultaNavigation)
+					.Where(c => c.IdCliente == clienteConsulta.IdCliente)
+					.ToList();
+
+				if(model._listaConsultas.Count == 0)
+				{
+					TempData["ClienteSinConsultas"] = $"¡Bienvenido {clienteConsulta.Nombre}! Aún no recibimos consultas bajo tu DNI, podes hacerlo desde la sección Contacto.";
+				}
+				HttpContext.Session.SetString("dniCliente", model.Cliente.Dni.ToString());
+			}
+			else
+			{
+				TempData["ClienteNoExistente"] = $"El DNI {cliente.Dni} no existe en nuestra base de datos.";
+			}
+			
+			return View(model);
+		}
+	}
 }

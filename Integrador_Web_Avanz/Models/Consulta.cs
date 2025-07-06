@@ -8,7 +8,10 @@ public partial class Consulta
 {
     public int IdConsulta { get; set; }
 
-    public string? Descripcion { get; set; }
+	[Required(ErrorMessage = "El campo {0} es requerido, cuentenos brevemente en qué lo podemos ayudar.")]
+	[Display(Name = "Descripción")]
+
+	public string? Descripcion { get; set; }
 
     public int? IdCliente { get; set; }  // FK
 

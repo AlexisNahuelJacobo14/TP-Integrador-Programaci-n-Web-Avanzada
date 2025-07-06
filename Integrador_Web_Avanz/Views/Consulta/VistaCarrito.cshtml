@@ -15,20 +15,20 @@
     {
         <tr>
             <td>
-                <a class="btn btn-primary" asp-action="Quitar" asp-controller="Consulta" asp-route-id=@item._Consulta.IdConsulta>Quitar</a>
+                <a class="btn btn-primary" asp-action="Quitar" asp-controller="Consulta" asp-route-idCarrito="@item._Consulta.IdTipoConsulta">Quitar</a>
             </td>
             <td>@item._Consulta.IdTipoConsultaNavigation.IdTipoConsulta</td>
             <td>@item._Consulta.IdTipoConsultaNavigation.TipoDeConsulta</td>
             <td>@item._Consulta.Descripcion</td>
-            <td>@item._Consulta.IdTipoConsultaNavigation.Precio</td>
+            <td>$ @item._Consulta.IdTipoConsultaNavigation.Precio</td>
             <td>@item.Cantidad</td>
-            <td>@(item._Consulta.IdTipoConsultaNavigation.Precio * item.Cantidad)</td>
+            <td>$ @(item._Consulta.IdTipoConsultaNavigation.Precio * item.Cantidad)</td>
         </tr>
     }
 </table>
 <div class="align-items-end">
-    <label class="form-label">Total</label>
-    <label class="form-label"> @Model.Sum(i => i.Cantidad * i._Consulta.IdTipoConsultaNavigation.Precio)</label>
+    <label class="form-label">Total a pagar</label>
+    <label class="form-label text-success fw-bold">$ @Model.Sum(i => i.Cantidad * i._Consulta.IdTipoConsultaNavigation.Precio)</label>
 </div>
 <br />
 <a class="btn btn-info" asp-action="Index" asp-controller="Home">Volver</a>

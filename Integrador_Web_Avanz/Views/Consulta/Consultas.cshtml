@@ -1,4 +1,4 @@
-﻿@model List<Integrador_Web_Avanz.Models.Consulta>
+﻿@model Integrador_Web_Avanz.Models.ClienteConsultaVM
 @{
 	ViewData["Title"] = "Consultas";
 	Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,9 +6,41 @@
 }
 
 <h1>Consultas </h1>	
+
+@if(Model._listaConsultas.Count == 0)
+{
+	<div class="row">
+		<div class="col-sm-4">
+			<p class="text text-black">¿Ya es cliente nuestro? Ingrese su DNI para ver las consultas realizadas.</p>
+			<form asp-action="Consultas" asp-controller="Consulta" method="post">
+				<div class="mb-2">
+					<label class="form-label" asp-for="Cliente.Dni">DNI</label>
+					<input type="number" class="form-control form-control-sm" asp-for="Cliente.Dni" />
+					<span asp-validation-for="Cliente.Dni" class="text-danger"></span>
+				</div>
+	
+				<button class="btn btn-primary" type="submit">Ver consultas</button>
+			</form>
+		</div>
+	</div>
+}
+@if(@TempData["ClienteNoExistente"] != null)
+{
+	<div class="row">
+		<p class="alert alert-danger">@TempData["ClienteNoExistente"]</p>
+	</div>
+}
+
+@if (@TempData["ClienteSinConsultas"] != null)
+{
+	<div class="row">
+		<span class="alert alert-warning">@TempData["ClienteSinConsultas"]</span>
+	</div>
+}
 <table class="table table-striped">
 	<thead>
 		<tr>
+			<th>Accion</th>
 			<th>Partner elegido</th>
 			<th>Tipo de consulta</th>
 			<th>Descripción</th>
@@ -19,9 +51,12 @@
 	</thead>
 	<tbody>
 		
-		@foreach (var consulta in Model)
+		@foreach (var consulta in Model._listaConsultas)
 			{
 				<tr>
+				<td>
+					<a class="btn btn-danger" asp-action="Eliminar" asp-controller="Consulta" asp-route-IdConsulta=@consulta.IdConsulta asp-route-IdAlumno=@consulta.IdConsulta>Eliminar</a>
+				</td>
 				@if (@consulta.IdPartnerNavigation != null)
 				{
 					<td>@consulta.IdPartnerNavigation.Marca</td>
@@ -37,7 +72,7 @@
 					
 					<td>@consulta.Descripcion</td>
 
-				@if (@consulta.IdClienteNavigation.Nombre != null) { 
+				@if (@consulta.IdClienteNavigation.Nombre != null) {
 				<td>@consulta.IdClienteNavigation.Nombre</td>
 				}
 				else{
